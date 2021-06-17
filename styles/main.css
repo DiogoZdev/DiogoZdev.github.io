@@ -4,6 +4,7 @@
           box-sizing: border-box;
   font-family: "century gothic";
   font-size:20px;
+  position:relative;
 }
 
 :root {
