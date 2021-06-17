@@ -7,9 +7,13 @@ a, a:hover, a:visited {
     text-decoration:none;
 }
 
+#soon{
+    font-size: 30px;
+}
+
 #bat{
     position:absolute;
-    height:150px;
+    height:200px;
     top:0;
     right:30px;
 
@@ -19,5 +23,6 @@ a, a:hover, a:visited {
 #bat:hover{
     transform:rotateZ(10deg);
     transition:.4s;
-    right:40px;
+    right:45px;
 }
+
