@@ -1,0 +1,23 @@
+h1{
+    font-size: 2.5rem;
+}
+
+a, a:hover, a:visited {
+    color: inherit;
+    text-decoration:none;
+}
+
+#bat{
+    position:absolute;
+    height:150px;
+    top:0;
+    right:30px;
+
+    transition:.4s;
+}
+
+#bat:hover{
+    transform:rotateZ(10deg);
+    transition:.4s;
+    right:40px;
+}
