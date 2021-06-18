@@ -1,0 +1,393 @@
+<html>
+    <head>
+        <title>CI Atos - Ctrl+C</title>
+        <meta charset="utf-8"/>
+		<link rel="shortcut icon" type="image/icon" href="favicon.ico"/>
+        <style>        
+			html
+			{
+				width:100%;
+				font-family:'Century Gothic';
+			}
+				
+			::-webkit-scrollbar
+			{
+				display:none;
+				width:0;
+			}
+				
+			*
+			{
+				margin:0;
+				padding:0;
+				border: 0;
+				box-sizing:border-box;
+			}
+
+			body
+			{
+				width:100%;
+				height:100%;
+			}
+
+			.hidden{
+				display:none;
+			}
+
+			.shown{
+				display:block;
+			}
+				
+			#content
+			{
+				width:100%;
+				padding:50px 0 50px 0;
+
+                    
+				display:flex;
+				flex-direction:column;
+				align-items:center;
+				justify-content:center;
+			}
+				
+			#menu
+			{
+				position:fixed;
+				top:0;
+				left:0;
+				z-index:9;
+				width:160px;
+				height:105px;
+				background-color:#36a;
+				color:#fff;
+				cursor:pointer;
+			}
+				
+			.m-closed
+			{
+				margin-top:-80px;
+				transition:.3s;
+			}
+				
+			.m-opened
+			{
+				margin-top:0;
+				transition:.3s;
+			}
+
+
+			#languages{
+				width:100%;
+				height:40px;
+				display:flex;
+				flex-direction:row;
+
+				background-color: #555;
+			}
+
+			#port, #esp{
+				display:flex;
+				justify-content: center;
+				align-items:center;
+				font-weight:bold;
+			}
+
+			#port:hover, #esp:hover{
+				text-decoration: underline;
+			}
+
+			#portugues, #espanhol{
+				margin-bottom:150px;
+			}
+				
+			#colors
+			{
+				width:100%;
+				height:40px;
+				display:flex;
+				flex-direction:row;
+				border-bottom:2px solid black;
+			}
+				
+			#color
+			{
+				width:80px;
+				height:40px;
+				text-align:center;
+				line-height:40px;
+				font-size:14pt;
+				font-weight:bold;
+			}
+				
+			.color1
+			{
+				background:#FFF;
+				color:#000;
+			}
+				
+			.color2
+			{
+				background:#222;
+				color:#ccc;
+			}
+				
+			#menu-word
+			{
+				display:flex;
+				flex-direction:row;
+				justify-content:center;
+			}	
+
+			p
+			{
+				width:100%;
+				font-size:14pt;
+				text-align:center;
+				line-height:18pt;
+				padding:10px 30px;
+				transition:.4s;
+			}
+
+			p:hover
+			{
+				background-color: #aaa8;
+				/*text-shadow:1px 4px 5px rgb(0,0,0,0.6);*/
+				cursor:pointer;
+			}
+
+			div
+			{
+				width:inherit;
+				padding:0;
+			}
+
+			.pt p:active
+			{   
+				background-color: #36a;
+				color:#fff;
+				transition:0s;
+			}
+
+			.es p:active
+			{   
+				background-color: #c96565; 
+				color:#fff;
+			}
+
+			.txt
+			{
+				min-height: 100px;
+				min-width: 500px;
+
+				max-height: 150px;
+				max-width:500px;
+
+				border: 2px solid #000000; 
+				font-family: "Century Gothic";
+				font-size:14pt;
+			}
+
+			h2
+			{
+				width:100%;
+				line-height:40px;
+				text-align:center;
+				text-decoration: underline;
+			}
+
+		</style>
+		<script>
+			function copy(id){
+			
+				//ENCONTRADO O COMANDO PARA COPIAR NO CLIPBOARD
+				navigator.clipboard.writeText(id.innerHTML);
+				
+				document.getElementById("status").innerHTML="! ! !";
+				
+				setTimeout(function(){document.getElementById("status").innerHTML="menu"}, 1200);
+				
+				if (document.getElementById("menu").classList.contains("m-opened")==true){
+				document.getElementById("menu").classList.remove("m-opened");
+				document.getElementById("menu").classList.add("m-closed");
+				}
+				
+			}
+						
+			function toggle(){
+				var m = document.getElementById("menu").classList;
+				
+				if(
+					m.contains("m-closed")==true){
+					m.remove("m-closed");
+					m.add("m-opened")
+				} else {
+					m.add("m-closed");
+					m.remove("m-opened");
+				}
+			}
+			
+			getElementsByTagName
+			function color(id){
+				var cont = document.getElementById("content").classList;
+				cont.remove("color1","color2");
+				cont.add(id.classList);
+			};
+
+			function port(){
+				document.getElementById('portugues').classList.add('shown');
+				document.getElementById('espanhol').classList.add('hidden');
+				document.getElementById('espanhol').classList.remove('shown');
+			};
+
+			function esp(){
+				document.getElementById('espanhol').classList.add('shown');
+				document.getElementById('portugues').classList.add('hidden');
+				document.getElementById('portugues').classList.remove('shown');
+			};
+
+
+		</script>
+
+    </head>
+    <body onSelectStart ="return false">
+		<div id="menu" class="m-closed">
+			<div id="languages">
+				<div id="port" onclick="port()">PORT</div>
+				<div id="esp" onclick="esp()">ESP</div>
+			</div>
+			<div id="colors">
+				<div id="color" class="color1" onclick="color(this)">Light</div>
+				<div id="color" class="color2" onclick="color(this)">Dark</div>
+			</div>
+			<div id="menu-word" onclick="toggle()">
+				   <text id="status">menu</text>
+			</div>
+		</div>
+	<div id="content">
+        <div class="pt shown" id="portugues">
+			<h2>Notas da chamada</h2>
+			<br>
+			<br>
+            <p onclick="copy(this)">Não seguiu o script inicial.</p>
+            <p onclick="copy(this)">Não se apresentou.</p>
+            <p onclick="copy(this)">Não coletou o número de telefone.</p>
+            <p onclick="copy(this)">Não questionou se a ligação era sobre um chamado novo ou já existente.</p>
+			<p onclick="copy(this)">Coletou os dados cadastrais do usuário após a sondagem, sendo um chamado novo.</p>
+			<p onclick="copy(this)">Não verificou a disponibilidade do usuário para encaminhar o chamado.</p>
+			<p onclick="copy(this)">Não verificou a localidade do usuário para encaminhar o chamado.</p>
+            <p onclick="copy(this)">Não solicitou o encerramento de arquivos confidenciais antes do acesso remoto.</p>
+            <p onclick="copy(this)">Não agradeceu por aguardar após o Hold.</p>
+            <p onclick="copy(this)">Não ofereceu o número do chamado.</p>
+            <p onclick="copy(this)">Não ofereceu ajuda adicional.</p>
+			<p onclick="copy(this)">Não encaminhou para o Live-Feedback.</p>
+            <p onclick="copy(this)">Não seguiu o script de encerramento.</p>
+			<br>
+			<br>
+			<h2>Validação da chamada</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Ótimo atendimento. Continue o bom trabalho! </p>
+			<p onclick="copy(this)">Bom atendimento. </p>
+            <p onclick="copy(this)">Sempre questionar se a ligação é sobre um chamado novo ou já existente. </p>
+			<p onclick="copy(this)">Atentar sempre coletar os dados do usuário. </p>
+			<p onclick="copy(this)">Alinhar o tempo em espera e aderir à etiqueta de hold. </p>
+			<p onclick="copy(this)">Sempre solicitar o encerramento de arquivos confidenciais antes do acesso remoto. </p>
+			<p onclick="copy(this)">Sempre oferecer ajuda adicional. </p>
+			<p onclick="copy(this)">Sempre oferecer o número do ticket. </p>
+			<p onclick="copy(this)">Encaminhar para o Live-Feedback em casos de FCR. </p>
+			<br>
+			<br>
+			<h2>Validação do ticket</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Ótimo registro. Continue o bom trabalho! </p>
+			<p onclick="copy(this)">Bom registro. </p>
+			<p onclick="copy(this)">Sempre registrar os dados dos usuários. </p>
+			<p onclick="copy(this)">Registrar telefone de contato. </p>
+			<p onclick="copy(this)">Sempre registrar a solicitação inicial, a verificação realizada (troubleshooting) e o motivo de encerramento. </p>
+			<p onclick="copy(this)">Informar a localidade ao encaminhar o ticket. </p>
+			<p onclick="copy(this)">Informar a disponibilidade do usuário ao encaminhar o ticket. </p>
+			<p onclick="copy(this)">Utilizar a regra de 3 strikes antes de encerrar o ticket sem confirmação do usuário. </p>
+			<br>
+			<br>
+			<h2>Notas do ticket</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Título genérico.</p>
+			<p onclick="copy(this)">Captura de tela não anexada.</p>
+			<p onclick="copy(this)">FCR indicado indevidamente.</p>
+			<p onclick="copy(this)">Não registrou os dados do usuário.</p>
+			<p onclick="copy(this)">Não registrou o telefone de contato.</p>
+			<p onclick="copy(this)">Não informou o problema relatado</p>
+			<p onclick="copy(this)">Não registrou a verificação realizada</p>
+			<p onclick="copy(this)">Não registrou a disponibilidade.</p>
+			<p onclick="copy(this)">Não registrou a localidade.</p>
+			<p onclick="copy(this)">Não anexou evidência do suporte realizado remotamente.</p>
+			<p onclick="copy(this)">Solução genérica.</p>
+		</div>
+        <div class="es hidden" id="espanhol">
+			<h2>Notas de la llamada</h2>
+			<br>
+			<br>
+            <p onclick="copy(this)">No siguió el script de inicio.</p>
+            <p onclick="copy(this)">No se presentó al usuario.</p>
+            <p onclick="copy(this)">No preguntó el número de teléfono.</p>
+            <p onclick="copy(this)">No preguntó si la llamada era para un ticket nuevo o ya existente.</p>
+			<p onclick="copy(this)">Confirmó los datos cadastrales después de la verificación, en una llamada nueva.</p>
+			<p onclick="copy(this)">No verificó la disponibilidad del usuario para encaminar el ticket.</p>
+			<p onclick="copy(this)">No verificó la ubicación del usuario para encaminar el ticket.</p>
+            <p onclick="copy(this)">No solicitó el cierre de los archivos confidenciales antes del acceso remoto.</p>
+            <p onclick="copy(this)">No agradeció por la espera después del tiempo en Hold.</p>
+            <p onclick="copy(this)">No ofreció el número del ticket.</p>
+            <p onclick="copy(this)">No ofreció ayuda adicional.</p>
+			<p onclick="copy(this)">No encaminó para Live-Feedback.</p>
+            <p onclick="copy(this)">No siguió el script final.</p> 
+			<br>
+			<br>
+			<h2>Validación de la llamada</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Excelente atendimiento. Sigue el buen trabajo! </p>
+			<p onclick="copy(this)">Buen atendimiento. </p>
+			<p onclick="copy(this)">Siempre preguntar si la llamada es para un ticket nuevo o ya existente. </p>
+			<p onclick="copy(this)">Atentar siempre verificar los datos de los usuarios. </p>
+			<p onclick="copy(this)">Atentar al tiempo en hold y agradecer por la espera. </p>
+			<p onclick="copy(this)">Siempre solicitar el cierre de los archivos confidenciales antes del acceso remoto. </p>
+			<p onclick="copy(this)">Siempre ofrecer ayuda adicional. </p>
+			<p onclick="copy(this)">Siempre ofrecer el número del ticket. </p>
+			<p onclick="copy(this)">Encaminar para Live-Feedback en casos de FCR. </p>	
+			<br>
+			<br>
+			<h2>Validación del ticket</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Excelente registro. Sigue el buen trabajo! </p>
+			<p onclick="copy(this)">Buen registro. </p>
+			<p onclick="copy(this)">Siempre registrar los datos de los usuarios </p>
+			<p onclick="copy(this)">Registrar el teléfono. </p>
+			<p onclick="copy(this)">Siempre registrar la solicitud inicial, la verificación realizada (troubleshooting) y el motivo de cierre. </p>
+			<p onclick="copy(this)">Informar la ubicacion al encaminar el ticket. </p>
+			<p onclick="copy(this)">Informar la disponibilidad del usuario al encaminar el ticket. </p>
+			<p onclick="copy(this)">Utilizar la regla de 3 strikes antes de cerrar el ticket. </p>
+			<br>
+			<br>
+			<h2>Notas del ticket</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Título genérico.</p>
+			<p onclick="copy(this)">Captura de la pantalla no adjuntada.</p>
+			<p onclick="copy(this)">FCR apuntado incorrectamente.</p>
+			<p onclick="copy(this)">No registró los datos del usuario.</p>
+			<p onclick="copy(this)">No registró el teléfono del usuario.</p>
+			<p onclick="copy(this)">No registró la falla informada por el usuario.</p>
+			<p onclick="copy(this)">No registró el troubleshooting aplicado.</p>
+			<p onclick="copy(this)">No registró la disponibilidad.</p>
+			<p onclick="copy(this)">No registro la ubicación.</p>
+			<p onclick="copy(this)">No adjuntó captura de pantalla del soporte en acceso remoto.</p>
+			<p onclick="copy(this)">Solución genérica.</p>
+        </div>  
+            <br>
+			<br>
+	</div>
+    </body>
+</html>
