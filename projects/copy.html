@@ -24,6 +24,28 @@
 				box-sizing:border-box;
 			}
 
+			a, a:hover, a:visited, a:active{
+				color:#000;
+			}
+
+			.return{
+				width:250px;
+				height:35px;
+				position:fixed;
+				top:20px;
+				right:-80px;
+				transform:rotate(45deg);
+				z-index:8;
+
+				box-shadow:0 0 10px #0008;
+
+				background-color: #fa0;
+				display:flex;
+				justify-content: center;
+				align-items: center;
+				font-size:22px;
+			}
+
 			body
 			{
 				width:100%;
@@ -142,9 +164,9 @@
 			{
 				width:100%;
 				font-size:14pt;
-				text-align:center;
+				text-align:left;
 				line-height:18pt;
-				padding:10px 30px;
+				padding:10px 50px;
 				transition:1.5s;
 			}
 
@@ -250,6 +272,10 @@
 
     </head>
     <body onSelectStart ="return false">
+		<a href="../index.html"><div class="return">
+			Z-dev
+		</div></a>
+		
 		<div id="menu" class="m-closed">
 			<div id="languages">
 				<div id="port" onclick="port()">PORT</div>
@@ -297,19 +323,6 @@
 			<p onclick="copy(this)">Encaminhar para o Live-Feedback em casos de FCR. </p>
 			<br>
 			<br>
-			<h2>Validação do ticket</h2>
-			<br>
-			<br>
-			<p onclick="copy(this)">Ótimo registro. Continue o bom trabalho! </p>
-			<p onclick="copy(this)">Bom registro. </p>
-			<p onclick="copy(this)">Sempre registrar os dados dos usuários. </p>
-			<p onclick="copy(this)">Registrar telefone de contato. </p>
-			<p onclick="copy(this)">Sempre registrar a solicitação inicial, a verificação realizada (troubleshooting) e o motivo de encerramento. </p>
-			<p onclick="copy(this)">Informar a localidade ao encaminhar o ticket. </p>
-			<p onclick="copy(this)">Informar a disponibilidade do usuário ao encaminhar o ticket. </p>
-			<p onclick="copy(this)">Utilizar a regra de 3 strikes antes de encerrar o ticket sem confirmação do usuário. </p>
-			<br>
-			<br>
 			<h2>Notas do ticket</h2>
 			<br>
 			<br>
@@ -324,6 +337,19 @@
 			<p onclick="copy(this)">Não registrou a localidade.</p>
 			<p onclick="copy(this)">Não anexou evidência do suporte realizado remotamente.</p>
 			<p onclick="copy(this)">Solução genérica.</p>
+			<br>
+			<br>
+			<h2>Validação do ticket</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Ótimo registro. Continue o bom trabalho! </p>
+			<p onclick="copy(this)">Bom registro. </p>
+			<p onclick="copy(this)">Sempre registrar os dados dos usuários. </p>
+			<p onclick="copy(this)">Registrar telefone de contato. </p>
+			<p onclick="copy(this)">Sempre registrar a solicitação inicial, a verificação realizada (troubleshooting) e o motivo de encerramento. </p>
+			<p onclick="copy(this)">Informar a localidade ao encaminhar o ticket. </p>
+			<p onclick="copy(this)">Informar a disponibilidade do usuário ao encaminhar o ticket. </p>
+			<p onclick="copy(this)">Utilizar a regra de 3 strikes antes de encerrar o ticket sem confirmação do usuário. </p>			
 		</div>
         <div class="es hidden" id="espanhol">
 			<h2>Notas de la llamada</h2>
@@ -358,19 +384,6 @@
 			<p onclick="copy(this)">Encaminar para Live-Feedback en casos de FCR. </p>	
 			<br>
 			<br>
-			<h2>Validación del ticket</h2>
-			<br>
-			<br>
-			<p onclick="copy(this)">Excelente registro. Sigue el buen trabajo! </p>
-			<p onclick="copy(this)">Buen registro. </p>
-			<p onclick="copy(this)">Siempre registrar los datos de los usuarios </p>
-			<p onclick="copy(this)">Registrar el teléfono. </p>
-			<p onclick="copy(this)">Siempre registrar la solicitud inicial, la verificación realizada (troubleshooting) y el motivo de cierre. </p>
-			<p onclick="copy(this)">Informar la ubicacion al encaminar el ticket. </p>
-			<p onclick="copy(this)">Informar la disponibilidad del usuario al encaminar el ticket. </p>
-			<p onclick="copy(this)">Utilizar la regla de 3 strikes antes de cerrar el ticket. </p>
-			<br>
-			<br>
 			<h2>Notas del ticket</h2>
 			<br>
 			<br>
@@ -385,6 +398,19 @@
 			<p onclick="copy(this)">No registro la ubicación.</p>
 			<p onclick="copy(this)">No adjuntó captura de pantalla del soporte en acceso remoto.</p>
 			<p onclick="copy(this)">Solución genérica.</p>
+			<br>
+			<br>
+			<h2>Validación del ticket</h2>
+			<br>
+			<br>
+			<p onclick="copy(this)">Excelente registro. Sigue el buen trabajo! </p>
+			<p onclick="copy(this)">Buen registro. </p>
+			<p onclick="copy(this)">Siempre registrar los datos de los usuarios </p>
+			<p onclick="copy(this)">Registrar el teléfono. </p>
+			<p onclick="copy(this)">Siempre registrar la solicitud inicial, la verificación realizada (troubleshooting) y el motivo de cierre. </p>
+			<p onclick="copy(this)">Informar la ubicacion al encaminar el ticket. </p>
+			<p onclick="copy(this)">Informar la disponibilidad del usuario al encaminar el ticket. </p>
+			<p onclick="copy(this)">Utilizar la regla de 3 strikes antes de cerrar el ticket. </p>	
         </div>  
             <br>
 			<br>

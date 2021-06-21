@@ -3,27 +3,68 @@
     <head>
         <title>Diogo Z dev</title>
 
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/elements.css">
+        <link rel="stylesheet" href="styles/build.css">
+        <link rel="stylesheet" href="styles/style.css">
         <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon.ico">
     </head>
 
     <body>
-        <header class="center-center dark">
-                <text id="soon">Em breve</text>
-        </header>
-        <main class="center light">
-            oi
-        </main>
-        <footer class="center-center dark">
-            <img id="bat" src="icons/bat_red.png">
-            <div class="infoContent center-center ">
-                <ul>
-                    <a href="https://github.com/DiogoZdev" target="_blank"><li>GitHub</li></a>
-                    <a href=""><li>Sobre</li></a>
-                    <a href=""><li>Contato</li></a>
-                </ul>
+       
+    <header class="dark cover flex-center">
+        <h1 onclick="change_color(this)">Diogo<br> Zangirolani</h1>
+    </header>
+
+    <section class="light pad">
+        <h2>Projetos</h2>
+
+        <section class="card flex row">
+            <div class="img"><img src="img/cards.png" alt="Cards 4 english"></div>
+            <div class="info">
+                <header>Cards 4 english</header>
+                <p>Em desenvolvimento.<br>
+                Uma coleção de cartões para complementar o aprendizado do idioma e
+                 memorização do vocabulário. </p>
+                <a href="projects/cards4english/index.html"><button>Acessar</button></a>
             </div>
-        </footer>
+        </section>
+
+        <section class="card flex row">
+            <div class="img"></div>
+            <div class="info">
+                <header>New Tab</header>
+                <p>Em breve</p>
+                <button >Acessar</button>
+            </div>
+        </section>
+
+        
+
+
+    </section>
+
+    <footer class="dark cover flex-center">
+        <aside id="contactInfo" class="pad">
+            <header onclick="hideContactInfo()">X</header>
+            <p>Email:<br>
+            diogozang2@gmail.com
+            <br><br>
+            Telefone: <br>
+            +55 43 98444-9774</p>
+        
+        </aside>
+        
+        <div class="cover flex-center">
+            <ul class="flex-center row half-fit around">
+                <a href="https://github.com/diogozdev" target="_blank"><li>GitHub</li></a>
+                <li>Sobre</li>
+                <li onclick="showContactInfo()">Contato</li>
+            </ul>
+       </div>
+    </footer>
+
+
+
+
     </body>
+    <script src="scripts/screenFunctions.js"></script>
 </html>
