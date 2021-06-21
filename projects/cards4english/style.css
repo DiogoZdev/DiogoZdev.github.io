@@ -124,7 +124,7 @@ aside a:hover h3{
     text-decoration: underline;
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1000px) {
     .box{
         width: 30vw;
         height: 30vw;
