@@ -47,7 +47,7 @@ a, a:hover, a:active, a:visited{
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size:20px;
+    font-size:25px;
 }
 
 .box:hover .card{
@@ -84,7 +84,7 @@ a, a:hover, a:active, a:visited{
 
 h1{
     width: 100%;
-    font-size: 3vw;
+    font-size: 30px;
     margin:2vw 0 2vw 0;
     text-transform: capitalize;
 }
@@ -122,5 +122,21 @@ aside h3{
 aside a:hover h3{
     color:#fff;
     text-decoration: underline;
+}
+
+@media screen and (max-width:800px) {
+    .box{
+        width: 30vw;
+        height: 30vw;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .front, .back {
+        font-size:30px;
+    }
+
 }
 
