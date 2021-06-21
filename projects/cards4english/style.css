@@ -131,11 +131,16 @@ aside a:hover h3{
     }
 
     h1{
-        font-size: 40px;
+        font-size: 45px;
     }
 
     .front, .back {
-        font-size:30px;
+        font-size:38px;
+    }
+
+    aside h3{
+        font-size:35px;
+        margin-bottom:75px;
     }
 
 }
