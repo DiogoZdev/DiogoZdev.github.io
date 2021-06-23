@@ -10,29 +10,39 @@
 
     <body>
        
-    <header class="dark cover flex-center">
+    <header class="cover flex-center">
         <h1 onclick="change_color(this)">Diogo<br> Zangirolani</h1>
     </header>
+
+    <section class="pad">
+        <h2>Tecnologias</h2>
+        <div class="tech flex around">    
+            <div onclick="color(this)" class="box pad flex-center rounded">HTML</div>
+            <div onclick="color(this)" class="box pad flex-center rounded">CSS</div>
+            <div onclick="color(this)" class="box pad flex-center rounded">SCSS</div>
+            <div onclick="color(this)" class="box pad flex-center rounded">JS</div>
+            <div onclick="color(this)" class="box pad flex-center rounded">PHP</div>
+        </div>
+    </section>
 
     <section class="light pad">
         <h2>Projetos</h2>
 
         <section class="card flex row">
-            <div class="img"><img src="img/cards.png" alt="Cards 4 english"></div>
+            
             <div class="info">
                 <header>Cards 4 english</header>
-                <p>Em desenvolvimento.<br>
-                Uma coleção de cartões para complementar o aprendizado do idioma e
+                <p>Em desenvolvimento.</p>
+                <p>Uma coleção de cartões para complementar o aprendizado do idioma e
                  memorização do vocabulário. </p>
                 <a href="projects/cards4english/index.html" target="_blank"><button>Acessar</button></a>
             </div>
         </section>
 
         <section class="card flex row">
-            <div class="img"></div>
             <div class="info">
                 <header>New Tab</header>
-                <p>Em breve</p>
+                
                 <button >Acessar</button>
             </div>
         </section>
@@ -53,14 +63,16 @@
         
         </aside>
         
-        <div class="cover flex-center">
-            <ul class="flex-center row half-fit around">
+        <div class="flex-center row">
+            <ul class="pad flex-center column fit-half evenly">
                 <a href="https://github.com/diogozdev" target="_blank"><li>GitHub</li></a>
                 <li>Sobre</li>
                 <li onclick="showContactInfo()">Contato</li>
+                <a href="https://pages.github.com/" class="small margin-top">Possibilitado por Github Pages</li>
             </ul>
-       </div>
+        </div>
     </footer>
+    
 
 
 

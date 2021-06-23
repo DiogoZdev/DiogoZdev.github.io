@@ -124,7 +124,33 @@ aside a:hover h3{
     text-decoration: underline;
 }
 
-@media screen and (max-width:1000px) {
+.mobile{
+    display:none;
+
+    position:absolute;
+    top:30px;
+    left:30px;
+
+    width: 80px;
+    height:80px;
+    background-color: brown;
+}
+
+@media (max-width:1000px) {
+    
+    .content{
+        width:100%;
+    }
+
+    aside{
+        
+    }
+
+    .mobile{
+        display:block;
+    }
+    
+    
     .box{
         width: 30vw;
         height: 30vw;
@@ -135,7 +161,7 @@ aside a:hover h3{
     }
 
     .front, .back {
-        font-size:38px;
+        font-size:40px;
     }
 
     aside h3{
