@@ -141,7 +141,7 @@ footer h2{
 @media (max-width:901px) {
 
     :root{
-        font-size:35px;
+        font-size:16px;
     }
 
     .box{
@@ -154,7 +154,7 @@ footer h2{
     }
 
     p{
-        font-size:15rem;
+        font-size:1rem;
     }
 
 }
