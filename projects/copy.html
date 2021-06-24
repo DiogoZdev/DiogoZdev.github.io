@@ -92,6 +92,8 @@
 				background-color: #555;
 			}
 
+			
+
 			#port, #esp{
 				display:flex;
 				justify-content: center;
@@ -100,7 +102,7 @@
 			}
 
 			#port:hover, #esp:hover{
-				text-decoration: underline;
+				background-color: #333;
 			}
 
 			#portugues, #espanhol{
@@ -123,7 +125,7 @@
 				text-align:center;
 				line-height:40px;
 				font-size:14pt;
-				font-weight:bold;
+				font-weight:bolder;
 			}
 				
 			.color1
@@ -269,12 +271,12 @@
 		</script>
 
     </head>
-    <body onSelectStart ="return false">
+    <body onSelectStart ="return false" lang="pt">
 		
 		<div id="menu" class="m-closed">
 			<div id="languages">
-				<div id="port" onclick="port()">PORT</div>
-				<div id="esp" onclick="esp()">ESP</div>
+				<div id="port" onclick="port()">BR</div>
+				<div id="esp" onclick="esp()">ES</div>
 			</div>
 			<div id="colors">
 				<div id="color" class="color1" onclick="color(this)">Light</div>
@@ -298,6 +300,7 @@
 			<p onclick="copy(this)">Não verificou a localidade do usuário para encaminhar o chamado.</p>
             <p onclick="copy(this)">Não solicitou o encerramento de arquivos confidenciais antes do acesso remoto.</p>
             <p onclick="copy(this)">Não agradeceu por aguardar após o Hold.</p>
+			<p onclick="copy(this)">Atentar-se para não qualificar os procedimentos como "chatos" ou "buracráticos".</p>
             <p onclick="copy(this)">Não ofereceu o número do chamado.</p>
             <p onclick="copy(this)">Não ofereceu ajuda adicional.</p>
 			<p onclick="copy(this)">Não encaminhou para o Live-Feedback.</p>
@@ -313,9 +316,11 @@
 			<p onclick="copy(this)">Atentar sempre coletar os dados do usuário. </p>
 			<p onclick="copy(this)">Alinhar o tempo em espera e aderir à etiqueta de hold. </p>
 			<p onclick="copy(this)">Sempre solicitar o encerramento de arquivos confidenciais antes do acesso remoto. </p>
+			<p onclick="copy(this)">Confirmar a disponibilidade do usuário para encaminhar. </p>
 			<p onclick="copy(this)">Sempre oferecer ajuda adicional. </p>
 			<p onclick="copy(this)">Sempre oferecer o número do ticket. </p>
 			<p onclick="copy(this)">Encaminhar para o Live-Feedback em casos de FCR. </p>
+			<p onclick="copy(this)">Não encaminhar para o Live-Feedback se o caso não fom completamente resolvido. </p>
 			<br>
 			<br>
 			<h2>Notas do ticket</h2>
@@ -330,8 +335,11 @@
 			<p onclick="copy(this)">Não registrou a verificação realizada</p>
 			<p onclick="copy(this)">Não registrou a disponibilidade.</p>
 			<p onclick="copy(this)">Não registrou a localidade.</p>
+			<p onclick="copy(this)">FCR não indicado.</p>
 			<p onclick="copy(this)">Não anexou evidência do suporte realizado remotamente.</p>
 			<p onclick="copy(this)">Solução genérica.</p>
+			<p onclick="copy(this)">Utilizado template incorreto.</p>
+			<p onclick="copy(this)">Não editou o template corretamente.</p>
 			<br>
 			<br>
 			<h2>Validação do ticket</h2>
@@ -344,7 +352,9 @@
 			<p onclick="copy(this)">Sempre registrar a solicitação inicial, a verificação realizada (troubleshooting) e o motivo de encerramento. </p>
 			<p onclick="copy(this)">Informar a localidade ao encaminhar o ticket. </p>
 			<p onclick="copy(this)">Informar a disponibilidade do usuário ao encaminhar o ticket. </p>
-			<p onclick="copy(this)">Utilizar a regra de 3 strikes antes de encerrar o ticket sem confirmação do usuário. </p>			
+			<p onclick="copy(this)">Utilizar a regra de 3 strikes antes de encerrar o ticket sem confirmação do usuário. </p>
+			<p onclick="copy(this)">Apontar FCR quando a solicitação é resolvida e confimade no primeiro atendimento. </p>
+			<p onclick="copy(this)">Não apontar FCR quando a solicitação não é resolvida e confimade no primeiro atendimento. </p>				
 		</div>
         <div class="es hidden" id="espanhol">
 			<h2>Notas de la llamada</h2>
@@ -359,6 +369,7 @@
 			<p onclick="copy(this)">No verificó la ubicación del usuario para encaminar el ticket.</p>
             <p onclick="copy(this)">No solicitó el cierre de los archivos confidenciales antes del acceso remoto.</p>
             <p onclick="copy(this)">No agradeció por la espera después del tiempo en Hold.</p>
+			<p onclick="copy(this)">Atentarse para no calificar los procedimientos como "buracráticos".</p>
             <p onclick="copy(this)">No ofreció el número del ticket.</p>
             <p onclick="copy(this)">No ofreció ayuda adicional.</p>
 			<p onclick="copy(this)">No encaminó para Live-Feedback.</p>
@@ -374,9 +385,11 @@
 			<p onclick="copy(this)">Atentar siempre verificar los datos de los usuarios. </p>
 			<p onclick="copy(this)">Atentar al tiempo en hold y agradecer por la espera. </p>
 			<p onclick="copy(this)">Siempre solicitar el cierre de los archivos confidenciales antes del acceso remoto. </p>
+			<p onclick="copy(this)">Confirmar la disponibilidad del usuario para encaminar. </p>
 			<p onclick="copy(this)">Siempre ofrecer ayuda adicional. </p>
 			<p onclick="copy(this)">Siempre ofrecer el número del ticket. </p>
-			<p onclick="copy(this)">Encaminar para Live-Feedback en casos de FCR. </p>	
+			<p onclick="copy(this)">Encaminar para Live-Feedback en casos de FCR. </p>
+			<p onclick="copy(this)">No encaminar para Live-Feedback si el tema no fue completamente resuelto. </p>	
 			<br>
 			<br>
 			<h2>Notas del ticket</h2>
@@ -391,8 +404,11 @@
 			<p onclick="copy(this)">No registró el troubleshooting aplicado.</p>
 			<p onclick="copy(this)">No registró la disponibilidad.</p>
 			<p onclick="copy(this)">No registro la ubicación.</p>
+			<p onclick="copy(this)">FCR no indicado.</p>
 			<p onclick="copy(this)">No adjuntó captura de pantalla del soporte en acceso remoto.</p>
 			<p onclick="copy(this)">Solución genérica.</p>
+			<p onclick="copy(this)">Utilizado el template incorrecto.</p>
+			<p onclick="copy(this)">No editó el template correctamente.</p>
 			<br>
 			<br>
 			<h2>Validación del ticket</h2>
@@ -400,12 +416,14 @@
 			<br>
 			<p onclick="copy(this)">Excelente registro. Sigue el buen trabajo! </p>
 			<p onclick="copy(this)">Buen registro. </p>
-			<p onclick="copy(this)">Siempre registrar los datos de los usuarios </p>
+			<p onclick="copy(this)">Siempre registrar los datos de los usuarios. </p>
 			<p onclick="copy(this)">Registrar el teléfono. </p>
 			<p onclick="copy(this)">Siempre registrar la solicitud inicial, la verificación realizada (troubleshooting) y el motivo de cierre. </p>
 			<p onclick="copy(this)">Informar la ubicacion al encaminar el ticket. </p>
 			<p onclick="copy(this)">Informar la disponibilidad del usuario al encaminar el ticket. </p>
-			<p onclick="copy(this)">Utilizar la regla de 3 strikes antes de cerrar el ticket. </p>	
+			<p onclick="copy(this)">Utilizar la regla de 3 strikes antes de cerrar el ticket. </p>
+			<p onclick="copy(this)">Apuntar FCR cuando el tema es resuelto y confimado en el primer atendimiento. </p>
+			<p onclick="copy(this)">No apuntar FCR cuando el tema no es resuelto y confimado en el primer atendimiento. </p>	
         </div>
 		<footer class="padding">
 			<a href="https://diogozdev.github.io/">Criado por: Diogo Z</a>
