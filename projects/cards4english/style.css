@@ -37,9 +37,8 @@ a, a:hover, a:active, a:visited{
 .box{
     width:45%;
     aspect-ratio: 1/1;
-    border:1px solid ;
+    border:1px transparent ;
     perspective: 1000px;
-    will-change: transform;
 
     float:left;
     margin-right:2.5%;
@@ -78,7 +77,7 @@ a, a:hover, a:active, a:visited{
 }
 
 .front{
-    background-color: rgb(199, 184, 130);
+    background-color: #70919c;
     color:black;
     padding:15px;
 }
@@ -95,9 +94,11 @@ a, a:hover, a:active, a:visited{
 
 header{
     width:100%;
+    height: min-content;
     background-color:#222;
     color:#fff;
     position:sticky;
+    z-index: 999999;
 }
 
 header ul{
@@ -124,12 +125,10 @@ header ul li ul{
 header ul li:hover ul{
     display:block;
     position:absolute;
-    top:0;
+    bottom:0;
     left:0;
-    transform: translateY(60px);
-    z-index: 99;
+    transform: translateY(99.5%);
     width:100%;
-    padding:0.5rem 0;
     background-color: black;
 }
 
@@ -161,29 +160,6 @@ h1{
 
     display: flex;
     flex-direction: column;
-}
-
-aside{
-    width:25vw;
-    height:100vh;
-    background-color: #222;
-    color:#ccc;
-    padding:20px;
-    font-family: 'century gothic';
-
-    position:fixed;
-    right:0;
-}
-
-aside h3{
-    font-size: 22px;
-    margin-bottom: 2vh;
-    text-transform: capitalize;
-}
-
-aside a:hover h3{
-    color:#fff;
-    text-decoration: underline;
 }
 
 
