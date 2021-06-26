@@ -58,7 +58,7 @@ let colorsJSON = [
     {word:"White" , translation:"Branco" },
     {word:"Light-Gray" , translation:"Cinza claro" },
     {word:"Gray" , translation:"Cinza" },
-    {word:"Dark-Gray" , translation:"Conza escuro" },
+    {word:"Dark-Gray" , translation:"Cinza escuro" },
     {word:"Black" , translation:"Preto" },
     {word:"Red" , translation:"Vermelho" },
     {word:"Orange" , translation:"Laranja" },
