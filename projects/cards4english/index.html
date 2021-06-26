@@ -6,8 +6,11 @@
         <title>FlashCards 4 English</title>
         <link rel="stylesheet" href="style.css">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
     </head>
     <body>
+        <!-- TEMPLATE NÂO EXIBIDO, USADO PARA CONSTRUÇÃO DOS CARDS -->
         <div class="template">
             <div class="box">
                 <div class="card">
@@ -16,9 +19,22 @@
                 </div>
             </div>
         </div>
-        <div class="moblile">
-            
-        </div>
+        <!-- MENU SUSPENSO SUPERIOR -->
+        <header>
+            <ul>
+                <li>Sobre</li>
+                <li>Palavras ▼
+                    <ul>
+                        <a href="#numbers"><li>números</li></a>
+                        <a href="#colors"><li>cores</li></a>
+                        <a href="#places"><li>lugares</li></a>
+                        <a href="#countries"><li>países</li></a>
+                        <a href="#verbs"><li>verbos</li></a>
+                        <a href="#questions"><li>perguntas</li></a>
+                    </ul>
+                </li>
+        </header>
+
         <div class="content">
             <section>
                 <a id="numbers"><h1>números</h1></a>
@@ -60,16 +76,7 @@
             </section>
 
         </div>
-        <aside>
-            <h3>Sobre</h3>
-            <a href="#numbers"><h3>números</h3></a>
-            <a href="#colors"><h3>cores</h3></a>
-            <a href="#places"><h3>lugares</h3></a>
-            <a href="#countries"><h3>países</h3></a>
-            <a href="#verbs"><h3>verbos</h3></a>
-            <a href="#questions"><h3>perguntas</h3></a>
-
-        </aside>
+        
     </body>
     <script src="words.js"></script>
     <script src="script.js"></script>
