@@ -45,7 +45,7 @@ a, a:hover, a:active, a:visited{
     margin-right:2.5%;
     margin-bottom:2.5%;
 
-    font-size: 2.5rem;
+    font-size: 1rem;
 }
 
 .card{
@@ -97,6 +97,7 @@ header{
     width:100%;
     background-color:#222;
     color:#fff;
+    position:sticky;
 }
 
 header ul{
@@ -189,7 +190,7 @@ aside a:hover h3{
 @media (min-width:1000px) {
     .box{
         width:22%;
-        font-size:250%;
+        font-size:2rem;
     }
 }
 
