@@ -99,11 +99,11 @@ main{
 .words p{
     width:85%;
     font-size:1.7rem;
-    line-height: 200%;
+    line-height: 150%;
 }
 
 .visual{
-    padding-bottom:5rem;
+    padding-bottom:10rem;
 }
 
 footer{

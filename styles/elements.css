@@ -1,9 +1,9 @@
 .screen{
     margin:0 auto;
-    width:320px;
+    width:220px;
     aspect-ratio: 16 / 9;
     background: #eee;
-    border:black solid 15px;
+    border:black solid .8em;
 
     position:relative;
 }
@@ -71,8 +71,8 @@
     margin-left:10%;
 }
 
-@media (max-width:500px){
+@media (min-width:700px){
     .screen{
-        width:200px;
+        width:350px;
     }
 }
