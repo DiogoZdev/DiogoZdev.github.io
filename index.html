@@ -1,81 +1,63 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="pt">
     <head>
-        <title>Diogo Z dev</title>
+        <title>Diogo Zangirolani</title>
 
-        <link rel="stylesheet" href="styles/build.css">
         <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/elements.css">
+        <link rel="stylesheet" href="styles/animations.css">
         <link rel="icon" type="image/ico" sizes="16x16" href="assets/icons/favicon.ico">
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
     </head>
 
-    <body>
-       
-    <header class="cover flex-center">
-        <h1 onclick="change_color(this)">Diogo<br> Zangirolani</h1>
-    </header>
+    <body ondragstart="return false">
+        <div class="content">
+            <header>
+                <div class="center">
+                    <div class="logo">
+                        <img src="assets/img/DZ_500.png" alt="">
+                    </div>
+                    <div class="menu-mobile">
+                        <div class="menu-area"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="center-content">
+                    <div class="words"><p>Olá! <br>Eu sou o Diogo Zangirolani e gosto de criar coisas para a internet.</p></div>
+                    <div class="visual">
 
-    <section class="pad">
-        <h2>Tecnologias</h2>
-        <div class="tech flex around">    
-            <div onclick="color(this)" class="box pad flex-center rounded">HTML</div>
-            <div onclick="color(this)" class="box pad flex-center rounded">CSS</div>
-            <div onclick="color(this)" class="box pad flex-center rounded">Sass</div>
-            <div onclick="color(this)" class="box pad flex-center rounded">JS</div>
-            <div onclick="color(this)" class="box pad flex-center rounded">PHP</div>
+                        <div class="screen">
+                            <div class="virtual-head"></div>
+                            <div class="virtual-content">
+                                <div class="virtual-half">
+                                   <div class="p"></div>
+                                   <div class="p"></div>
+                                   <div class="p"></div>
+                                </div>
+                                <div class="virtual-half">
+                                    <div class="virtual-img"></div>
+                                </div>
+                            </div>                            
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="center">
+                    <ul>
+                        <a target="_blank" href="#"><li>Projetos</li></a>
+                        <a target="_blank" href="#"><li>Sobre</li></a>
+                        <a target="_blank" href="#"><li>Contato</li></a>
+                        <a target="_blank" href="https://github.com/diogozdev"><li>Github</li></a>
+                    </ul>
+                </div>
+            </footer>
         </div>
-    </section>
-
-    <section class="light pad">
-        <h2>Projetos</h2>
-
-        <section class="card flex row">
-            
-            <div class="info">
-                <header>Cards 4 english</header>
-                <p>Em desenvolvimento.</p>
-                <p>Uma coleção de cartões para complementar o aprendizado do idioma e
-                 memorização do vocabulário. </p>
-                <a href="projects/cards4english/index.html" target="_blank"><button>Acessar</button></a>
-            </div>
-        </section>
-
-        <section class="card flex row">
-            <div class="info">
-                <header>New Tab</header>
-                <p>Desenvolvimento visual de página de favoritos, layout próprio. <br> Em breve.</p>
-                <button >Acessar</button>
-            </div>
-        </section>
-
         
-
-
-    </section>
-
-    <footer class="dark cover flex-center">
-        <aside id="contactInfo" class="pad">
-            <header onclick="hideContactInfo()">[fechar]</header>
-            <p>Email:<br>
-            diogozang2@gmail.com
-            <br><br>
-            Telefone: <br>
-            +55 43 98444-9774</p>
-        
-        </aside>
-        
-        <div class="flex-center row">
-            <ul class="pad flex-center column fit-half evenly">
-                <a href="https://github.com/diogozdev" target="_blank"><li>GitHub</li></a>
-                <li>Sobre</li>
-                <li onclick="showContactInfo()">Contato</li>
-                <a href="https://pages.github.com/" target="blank" class="small margin-top">Github Pages</li>
-            </ul>
-        </div>
-    </footer>
-    
 
 
 
