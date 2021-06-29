@@ -80,14 +80,11 @@ a, a:hover, a:active, a:visited{
     position:absolute;
     right:3rem;
     top:3rem;
+    cursor:pointer;
 
     display:flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.menu-area:hover{
-    transform:rotate(5deg);
 }
 
 .menu-area-bar{

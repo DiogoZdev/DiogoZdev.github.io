@@ -1,12 +1,46 @@
+/*
+    ANIMATIONS FOR INTRO PAGE GEARS
+*/
+
+@keyframes hide-intro {
+    90%{
+        transform:translateY(-100%) ;
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes gear1 {
+    to{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes gear2 {
+    to{
+        transform: rotate(-180deg);
+    }
+}
+
+
+
+/*
+    ANIMATIONS FOR MAIN PAGE VIRTUAL MONITOR
+*/
+
 @keyframes writing{
     0% {width:40%;}
     100% {width:50%;}
 }
 
+/*
+    ANIMATIONS FOR MAIN PAGE FALLING BLOCKS
+*/
+
 @keyframes sq1{
     0% {top:0%;transform:rotate(-95deg);}
-    95% {top:80%; transform:rotate(450deg) scale(1);} 
-    100%{transform:scale(0)}
+    100% {top:85%; transform:rotate(450deg);}
 }
 
 @keyframes sq2{

@@ -1,3 +1,44 @@
+/*
+    ELEMENTOS COMPONENTES DA INTRODUÇÃO INICIAL 
+*/
+
+
+intro{
+    position:absolute;
+    z-index: 50;
+    width:100vw;
+    height:100vh;
+    background: var(--black);
+
+    animation: hide-intro 1.2s cubic-bezier(.5,.9,.8,-0.35) 1.5s 1 normal forwards;
+}
+
+gear-box{
+    position: absolute;
+    top:30%;
+    left:30%;
+    width:40%;
+    height:40%;/*
+    box-shadow: 0 0 1px red;*/
+}
+
+.gear1{
+    width:50%;
+
+    animation: gear1 1s linear 0s 1 forwards;
+}
+
+.gear2{
+
+    margin-left:-4%;
+    width:30%;
+
+    animation: gear2 1s linear 0s 1 forwards;
+}
+
+/*
+    ELEMENTOS COMPONENTES DO MONITOR VIRTUAL
+*/
 .screen{
     margin:0 auto;
     width:220px;
@@ -77,20 +118,20 @@
 
 .sq1, .sq2, .sq3{
     aspect-ratio: 1/1;
-    background: var(--black);
-    border:1px solid black;
+    background:#2225;
+    border:1px solid #0005;
     position:absolute;
 }
 
-.sq1{width:180px; right:50px;} 
+.sq1{width:100px; right:50px;} 
 .sq2{width:75px; left:200px; } 
 .sq3{width:50px; left:500px; display:none;}
 
-.asq1{animation: sq1 35s linear 0s infinite normal both;}
+.asq1{animation: sq1 25s linear 0s infinite reverse both;}
 
-.asq2{animation: sq2 16s linear 0s infinite normal both;}
+.asq2{animation: sq2 16s linear 0s infinite reverse both;}
 
-.asq3{animation: sq3 7s linear 0s infinite normal both;}
+.asq3{animation: sq3 7s linear 0s infinite reverse both;}
 
 
 @media (min-width:700px){
