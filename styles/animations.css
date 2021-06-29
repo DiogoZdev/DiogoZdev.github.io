@@ -13,3 +13,19 @@
     0% {width:20%;}
     100% {width:50%;}
 }
+
+@keyframes sq1{
+    0% {top:0%;transform:rotate(-95deg);}
+    95% {top:80%; transform:rotate(450deg) scale(1);} 
+    100%{transform:scale(0)}
+}
+
+@keyframes sq2{
+    0% {top:0%;transform:rotate(-915deg);}
+    100% {top:90%; transform:rotate(13deg);}
+}
+
+@keyframes sq3{
+    0% {top:0%;transform:rotate(5deg);}
+    100% {top:90%; transform:rotate(-500deg);}
+}
