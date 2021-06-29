@@ -1,0 +1,15 @@
+@keyframes writing1{
+    0% {width:90%;}
+    50% {width:20%;}
+    90% {width:80%;}
+}
+
+@keyframes writing2{
+    0% {width:30%;}
+    100% {width:80%;}
+}
+
+@keyframes writing3{
+    0% {width:20%;}
+    100% {width:50%;}
+}

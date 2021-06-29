@@ -63,6 +63,18 @@
     margin:15% 10%;
 }
 
+.animation1{
+    animation: writing1 2s linear .3s infinite alternate both;
+}
+
+.animation2{
+    animation: writing2 1.5s linear .3s infinite alternate both;
+}
+
+.animation3{
+    animation: writing3 2.12s linear .5s infinite alternate both;
+}
+
 .virtual-half .virtual-img{
     width:70%;
     height:60%;
