@@ -39,16 +39,16 @@
 */
 
 @keyframes sq1{
-    0% {top:0%;transform:rotate(-95deg);}
+    0% {top:0%; transform:rotate(-95deg);}
     100% {top:85%; transform:rotate(450deg);}
 }
 
 @keyframes sq2{
     0% {top:0%;transform:rotate(-915deg);}
-    100% {top:90%; transform:rotate(13deg);}
+    100% {top:85%; transform:rotate(13deg);}
 }
 
 @keyframes sq3{
     0% {top:0%;transform:rotate(5deg);}
-    100% {top:90%; transform:rotate(-500deg);}
+    100% {top:85%; transform:rotate(-500deg);}
 }
