@@ -74,7 +74,7 @@ a, a:hover, a:active, a:visited{
     width:45%;
 }
 
-.menu-mobile{
+.menu{
     margin-right:auto;
     width:100%;
 
@@ -82,17 +82,17 @@ a, a:hover, a:active, a:visited{
 }
 
 .menu-area{
-    width:50px;
+    width:40px;
     /*background: var(--black);*/
 
     position:absolute;
-    right:3rem;
-    top:3rem;
+    right:2.5rem;
+    top:2.5rem;
     cursor:pointer;
 
     display:flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .menu-area-bar{
@@ -102,7 +102,35 @@ a, a:hover, a:active, a:visited{
 }
 
 
+.mobile-menu{
+    position:fixed;
+    z-index: 99999;
+    background-color: #262626;
+    width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
 
+.mobile-menu div{
+    position:absolute;
+    top:2.5rem;
+    right:2.5rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.mobile-menu a{
+    font-size: 2rem;
+    margin:1rem 0;
+}
+
+.mobile-menu a:hover{
+    color:white;
+    text-decoration: underline;
+}
 
 .words, .visual{
     padding:3rem;
@@ -167,4 +195,10 @@ footer ul li{
         width:fit-content;
     }
 
+}
+
+/* ESTILOS ÚTEIS SOBREPOSTOS */
+
+.hidden{
+    display: none;
 }

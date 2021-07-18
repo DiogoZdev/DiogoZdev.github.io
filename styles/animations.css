@@ -29,10 +29,17 @@
     ANIMATIONS FOR MAIN PAGE VIRTUAL MONITOR
 */
 
-@keyframes writing{
-    0% {width:40%;}
-    100% {width:50%;}
+
+@keyframes iconSet {
+    0%{background-image: url(../assets/icons/html.png);}
+    18%{background-image: url(../assets/icons/sass.png);}
+    38%{background-image: url(../assets/icons/js.png);}
+    50%{background-image: url(../assets/icons/react.png);}
+    64%{background-image: url(../assets/icons/php.png);}
+    78%{background-image: url(../assets/icons/sql.png);}
+    100%{background-image: url(../assets/icons/html.png);}
 }
+
 
 /*
     ANIMATIONS FOR MAIN PAGE FALLING BLOCKS

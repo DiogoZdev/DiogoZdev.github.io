@@ -4,7 +4,7 @@
 
 
 intro{
-    position:absolute;
+    position:fixed;
     z-index: 50;
     width:100vw;
     height:100vh;
@@ -18,8 +18,7 @@ gear-box{
     top:30%;
     left:30%;
     width:40%;
-    height:40%;/*
-    box-shadow: 0 0 1px red;*/
+    height:40%;
 }
 
 .gear1{
@@ -109,11 +108,13 @@ gear-box{
 }
 
 .virtual-half .virtual-img{
-    width:70%;
-    height:60%;
-    background: var(--purple);
+    width:50%;
+    aspect-ratio: 1;
+    background-size: 100%;
     margin-top:15%;
     margin-left:10%;
+
+    animation: iconSet 14s linear 0s infinite;
 }
 
 .sq1, .sq2, .sq3{
