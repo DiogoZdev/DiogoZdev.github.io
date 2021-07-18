@@ -117,7 +117,7 @@ gear-box{
     margin-top:15%;
     margin-left:10%;
 
-    animation: iconSet 14s linear 0s infinite;
+    animation: iconSet 14s steps(7) 0s infinite;
 }
 
 .sq1, .sq2, .sq3{
