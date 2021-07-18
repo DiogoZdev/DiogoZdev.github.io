@@ -114,16 +114,18 @@ a, a:hover, a:active, a:visited{
     justify-items: center;
 }
 
-.mobile-menu div{
+.mobile-menu .close-mobile-menu{
     position:absolute;
     top:2.5rem;
-    right:2.5rem;
-    font-size: 3rem;
+    right:3rem;
+    width:2rem; height:2rem;
+    font-size: 2rem;
+    line-height: 80%;
     cursor: pointer;
 }
 
 .mobile-menu a{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin:1rem 0;
 }
 
