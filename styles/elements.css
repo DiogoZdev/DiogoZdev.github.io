@@ -98,13 +98,16 @@ gear-box{
 /*ANIMAÇÃO ALTERA O TAMANHO ENTRE 20% E 80% */
 .virtual-half .p{
     width:80%;
-    height:8%;
+    height:4px;
     background: #555;
-    margin:15% 10%;
+    margin:8% 10%;
 }
 
 .writeLine{
-    animation: writing .8s steps(2) .3s infinite alternate both;
+    width:55%;
+    height:4px;
+    background: #555;
+    margin:8% 10%;
 }
 
 .virtual-half .virtual-img{
