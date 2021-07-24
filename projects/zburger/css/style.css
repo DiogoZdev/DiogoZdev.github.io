@@ -21,6 +21,12 @@ body, html {
   --color4:#fff2c6;
 }
 
+@media (max-width: 700px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
 /* Construction Elements */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'lobster';
