@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>zBurger delivery app</title>
+</head>
+<body>
+
+    <section class="confirm-request hidden">
+        <hr>
+        
+        <form action="">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name">
+            <label for="name">Cidade:</label>
+            <input label="Cidade" type="text" id="city" name="city">
+            <label for="name">Rua:</label>
+            <input label="Rua" type="text" id="street" name="street">
+            <div>
+                <div>
+                    <label for="name">Número:</label>
+                    <input label="número" type="number" id="number" name="number">
+                </div><div>
+                    <label for="other">Complemento:</label>
+                    <input label="número" type="text" id="complement" name="complement">
+                </div>
+            </div>    
+        </form>
+        <button type="submit" class="yes" onClick="submitRequest()">enviar pedido</button>
+        <button class="neutral" id="toggleRequest--cancel">cancelar</button>
+    </section>
+
+    <section class="general-information hidden">
+        <button class="no" onClick="toggleInfo()">fechar</button>
+        <hr>
+        <div class="info">
+            <p><span class="alert">O zBurger é um protótipo.</span><br>
+                
+                Com anos de experiência proporcionando o melhor sabor, agora recebendo pedidos por WhatsApp.<br>
+                O zBurger oferece os produtos de melhor qualidade: pães gourmet, carne fresca grelhada no ponto e acompanhamentos
+                selecionados para satisfazer aquele desejo por um podrão gourmet.
+                Sediada no município de Londrina, a zBurger teve um início humilde com suas primeiras vendas no centro da cidade.
+                Amizade é tradição e o melhor serviço é o padrão conhecido e amado por todos.
+                Bateu aquela fome? Não deixe de pedir agora o seu favorito!   
+                
+                Mais informações e outros projetos
+                podem ser encontrados neste <a href="https://diogozdev.github.io" target="_blank">link</a> [ diogozdev.github.io ].
+                <br><br>
+                Vai me dizer que não deu vontade de pedir um? :D 
+            </p>
+        </div>
+    </section>
+
+    <aside class="cart col hidden">
+        <button class="button no" onClick="toggleCart()">fechar</button>
+
+        <div class="cart-items-area" id="cart-items-area"></div>
+
+        <div class="value">Valor total: <span class="totalValue">R$ 00.00</span></div>
+        <button class="button yes" id="toggleRequest--aside">confirmar pedido</button>
+        <button class="button neutral" onClick="clearBag()">limpar sacola</button>
+    </aside>
+
+    <header>
+        <div class="container row">
+            
+            <div><h1>zBurger</h1></div>
+            <div class="contact">
+                ☎ (43) 98444-9774<br>
+                contato@zburger.com<br>
+                de Seg à Sáb - das 17:00 às 23:30 
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container no-padding">
+            <ul>
+                <li onClick="toggleInfo()">Sobre</li>
+                <li class="bag" onClick="toggleCart()">Sacola</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container ">
+            <h2>Hamburgers</h2>
+            <hr>
+            <div class="display">
+                
+            </div>
+            <hr>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="container quote">
+            Simplesmente o melhor Hamburger
+        </div>
+    </footer>
+
+
+
+    <templates class="hidden">
+        
+        <div class="item-modal">
+            <div class="modal-top">
+                <div class="modal-image">img</div>
+            </div>
+            <div class="modal-bottom">
+                <div class="modal-title">Burg --</div>
+                <div class="modal-price">R$ --</div>
+                <div class="add" data-burger="" onClick="add_toCart(this)">+</div>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="cart-modal">
+            <div class="cart-item-img"></div>
+            <div class="cart-item-quantity">0</div>
+            <div class="cart-item-name">Burger</div>
+        </div>
+
+    </templates>
+
+
+</body>
+<script src="scripts/burgerJSON.js"></script>
+<script src="scripts/buildingFunctions.js"></script>
+</html>

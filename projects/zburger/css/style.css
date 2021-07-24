@@ -1,0 +1,484 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+:root {
+  font-size: 22px;
+  font-family: sans-serif;
+  --color0:#1c4a75;
+  --color1:#3c79a0;
+  --color2:#bb3c37;
+  --color3:#ff8344;
+  --color4:#fff2c6;
+}
+
+/* Construction Elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'lobster';
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+hr {
+  color: var(--color0);
+  position: relative;
+  margin: 10px 0;
+}
+
+hr:before {
+  position: absolute;
+  transform: translateX(10%);
+  width: 80%;
+  height: 5px;
+  top: 5px;
+  content: '';
+  padding-top: 5px;
+  border-top: 2px solid var(--color0);
+}
+
+hr:after {
+  position: absolute;
+  content: 'zBurger';
+  font-family: 'lobster';
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  text-shadow: 0px 0px 2px white, 0px 0px 4px white,  0px 0px 5px white, 0px 0px 6px white,  0px 0px 7px white,  0px 0px 8px white;
+}
+
+/* Visible Elements */
+section {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+  position: fixed;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 2px #0003;
+  inset: .5rem;
+  background-color: white;
+  padding: 1rem;
+}
+
+section hr {
+  margin: 2rem;
+}
+
+section p {
+  margin-right: 15px;
+  text-align: justify;
+  text-indent: 1rem;
+  hyphens: auto;
+}
+
+@media (min-width: 800px) {
+  section p {
+    columns: 2;
+    margin-left: 1rem;
+  }
+}
+
+section .info {
+  width: 100%;
+  max-height: 50%;
+  overflow-y: scroll;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-family: 'lobster';
+  font-size: 1.3rem;
+  text-indent: 1rem;
+}
+
+form input {
+  border: none;
+  height: 1.8rem;
+  margin-bottom: .5rem;
+  background-color: #eee;
+  border-radius: 5px;
+  padding-inline: 1rem;
+  font-size: 1rem;
+}
+
+form input[type=number] {
+  width: 8rem;
+}
+
+form div {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  form div {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+form div div {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.container div {
+  width: 100%;
+  height: 100%;
+}
+
+aside {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  overflow-y: scroll;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  color: black;
+}
+
+@media (min-width: 800px) {
+  aside {
+    width: 400px;
+    border-left: 2px solid black;
+  }
+}
+
+aside .value {
+  font-family: 'lobster';
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+aside .value .totalValue {
+  color: #27b627;
+}
+
+.cart-modal {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  font-family: 'lobster';
+  font-size: 1.5rem;
+}
+
+.cart-modal .cart-item-img {
+  margin: .5rem;
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.cart-modal .cart-item-img img {
+  width: 100%;
+}
+
+.cart-modal .cart-item-quantity {
+  margin-right: 1rem;
+}
+
+.cart-modal .cart-item-name {
+  width: 50%;
+  font-size: 1rem;
+}
+
+.cart-modal .remove-from-cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  flex-shrink: 0;
+  margin: 1rem;
+  background-color: #bb3c37;
+  text-align: center;
+  font-size: 2rem;
+  line-height: .7em;
+}
+
+header {
+  background-color: var(--color2);
+  color: white;
+  min-height: 25vh;
+}
+
+@media (max-width: 800px) {
+  header div {
+    display: flex;
+    flex-direction: column;
+  }
+  header div h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+header .phone {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  header .phone {
+    margin: 2rem;
+  }
+}
+
+nav {
+  position: sticky;
+  z-index: 2;
+  background-color: var(--color0);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  padding: 1rem;
+  list-style: none;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul li:hover {
+  background-color: var(--color2);
+  cursor: pointer;
+}
+
+main {
+  min-height: 150vh;
+}
+
+.display {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-modal {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+@media (min-width: 800px) {
+  .item-modal {
+    max-width: 49%;
+  }
+}
+
+.item-modal .modal-top {
+  width: 100%;
+}
+
+.item-modal .modal-top .modal-image {
+  width: 65%;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background: var(--color4);
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.item-modal .modal-top .modal-image img {
+  width: 100%;
+}
+
+.item-modal .modal-bottom {
+  width: 100%;
+}
+
+.item-modal .modal-bottom hr {
+  position: relative;
+  margin: 2rem auto 0 auto;
+  width: 75%;
+  color: var(--color0);
+}
+
+.item-modal .modal-bottom hr:after {
+  content: '';
+}
+
+.item-modal .modal-bottom .modal-title {
+  font-family: 'lobster';
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.item-modal .modal-bottom .modal-price {
+  font-family: 'lobster';
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--color0);
+}
+
+.item-modal .modal-bottom .add {
+  position: relative;
+  width: 60px;
+  margin: 1rem auto;
+  font-family: 'lobster';
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  background-color: var(--color0);
+  border-radius: 5px;
+  transition: 0s;
+  transition-delay: 1s;
+  cursor: pointer;
+}
+
+.item-modal .modal-bottom .add:hover {
+  background-color: var(--color1);
+}
+
+.item-modal .modal-bottom .add:active {
+  background-color: var(--color3);
+  transition: .0s;
+  transition-delay: 0s;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--color0);
+  color: white;
+}
+
+/*Overriding properties*/
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col2 {
+  columns: 2;
+}
+
+.close {
+  padding: 2em;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: var(--color2);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+button {
+  display: inline-block;
+  flex-shrink: 0;
+  height: 4rem;
+  border: none;
+  border-radius: 10px;
+  margin: 1rem;
+  color: white;
+  font-family: 'lobster';
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.yes {
+  background-color: #2b2;
+}
+
+.yes:hover {
+  background-color: #1a1;
+}
+
+.no {
+  background-color: #a00;
+}
+
+.no:hover {
+  background-color: #800;
+}
+
+.neutral {
+  background-color: #424242;
+}
+
+.neutral:hover {
+  background-color: #272727;
+}
+
+.alert {
+  background-color: yellow;
+}
+
+/* Font Styles */
+.requestInfo {
+  font-family: monospace;
+  font-weight: bold;
+  padding: .0 .5rem;
+}
+
+.quote {
+  font-family: 'lobster';
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.quote::before {
+  content: open-quote;
+  font-size: 6rem;
+  color: #000;
+}
+
+a, a:hover, a:visited, a:active {
+  color: crimson;
+}
+/*# sourceMappingURL=style.css.map */
