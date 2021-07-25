@@ -1,7 +1,7 @@
 // Useful constants
 
-const business_phone = 43984449774;
-const delivery_in = "1 hora";
+const business_phone = '+5543984449774';
+const delivery_in = '1 hora';
 
 const qs = (element)=>document.querySelector(element);
 
@@ -110,12 +110,12 @@ function submitRequest() {
     let name = qs('#name').value;
     let address = `${qs('#city').value}, ${qs('#street').value}, ${qs('#number').value} - ${qs('#complement').value}`;
 
-    let request = `** Eentrega em ${delivery_in} **
+    let request = `** Entrega em ${delivery_in} **
     Cliente: ${name}. 
     Endereço: ${address}.
 
     ${cartArray.map((item) => {
-        return `zB ${item.id} `
+        return `zB${item.id} `
     })}
 
     Total: ${qs('.totalValue').innerHTML}`; 
@@ -123,7 +123,7 @@ function submitRequest() {
     console.log(request); 
     let finalRequest = encodeURI(request);
 
-    window.open(`https://wa.me/+55${business_phone}?text=${finalRequest}`, '_brlank');
+    window.open(`https://wa.me/${business_phone}?text=${finalRequest}`, '_brlank');
     
     toggleCart();
     toggleRequest();

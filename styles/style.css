@@ -9,6 +9,7 @@
  }
 
 *{
+    box-sizing: border-box;
     margin:0;
     padding:0;
     color:#ddd;
@@ -16,6 +17,8 @@
     list-style: none;
     border:none;
 }
+
+img{width:100%;}
 
 html, body{
     width:100%;
@@ -49,12 +52,11 @@ a, a:hover, a:active, a:visited{
 }
 
 .center-content{
+    display:flex;
+    flex-direction: column;
     width:100%;
     max-width: 1000px;
     margin:0 auto;
-
-    display:flex;
-    flex-direction: column;
 }
 
 .content{
@@ -165,6 +167,7 @@ footer ul{
 footer ul a li{
     font-size:1.1rem;
     padding:2em 1em; 
+    
 }
 
 footer ul a:hover li{
@@ -203,4 +206,16 @@ footer ul li{
 
 .hidden{
     display: none;
+}
+
+a{
+    cursor:pointer;
+}
+
+.flex{
+    display:flex;
+}
+
+.col{
+    flex-direction: column;
 }

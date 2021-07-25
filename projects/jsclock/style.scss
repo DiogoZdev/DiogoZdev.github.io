@@ -1,0 +1,172 @@
+:root{
+    --dark:#3a3a3a;
+    --dark2:#222222;
+    --marker:#ccc;
+    --complement:#ea0;
+    --pointer:rgb(0, 0, 0);
+    --second:red;
+
+    --sec:1s;
+    --min:calc(var(--min) * 60);
+    --hour:calc(var(--min) * 60);
+}
+
+@keyframes rotate {
+    from{transform:rotate(0);}
+    to{transform:rotate(1turn);}
+}
+
+*{
+    margin:0; padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+body{
+    background-color: var(--dark);
+}
+
+
+
+.clock{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translateY(-50%) translateX(-50%);
+    width:35vw;
+    max-width: 60vh;
+    aspect-ratio: 1;
+    background-color: var(--dark);
+    border:solid 2vw var(--dark2);
+    border-radius: 100%;
+    box-shadow: 
+        -1px -1px 3px #0005,
+        inset -1px -1px 3px #0005,
+        inset 8px 8px 8px #0005,
+        8px 8px 8px #0005;
+}
+
+.clock:after{
+    
+    content:"";
+    position:absolute;
+    width:65%;
+    aspect-ratio: 1;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%);
+    background-color: var(--dark);
+    border-radius: 100%;
+}
+
+.marker1{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%);
+    width:4px;
+    height:90%;
+    background-color: var(--complement);
+}
+
+.marker2{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%) rotate(90deg);
+    width:4px;
+    height:90%;
+    background-color: var(--complement);
+}
+
+.marker3{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%) rotate(calc(360deg / 12));
+    width:2px;
+    height:85%;
+    background-color: var(--marker);}
+
+.marker4{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%) rotate(calc(360deg / 12 * 2));
+    width:2px;
+    height:85%;
+    background-color: var(--marker);
+}
+
+.marker5{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%) rotate(calc(360deg / 12 * 4));
+    width:2px;
+    height:85%;
+    background-color: var(--marker);
+}
+
+.marker6{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%, -50%) rotate(calc(360deg / 12 * 5));
+    width:2px;
+    height:85%;
+    background-color: var(--marker);
+}
+
+.day{
+    position: absolute;
+    z-index: 5;
+    top:25%;
+    left:50%;
+    transform: translateX(-50%);
+    width:15%;
+    height:8%;
+    background-color: white;
+    box-shadow: inset 5px 5px 5px #0005;
+}
+
+.stick{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:10;
+}
+
+#second{
+    width: 2px; height:30%;
+    background-color: var(--second);
+    transform-origin: top;
+    z-index: 15;
+}
+
+#minute{
+    width: 3px; height:30%;
+    background-color: var(--pointer);
+    transform-origin: top;
+}
+
+#hour{
+    width: 3px; height:25%;
+    background-color: var(--pointer);
+    transform-origin: top;
+}
+
+.day{
+    font-size: 1vw;
+}
+
+.day_text{
+    height: inherit; line-height: 150%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
