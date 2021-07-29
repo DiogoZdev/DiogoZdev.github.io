@@ -3,10 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 :root {
-  --black:#262626;
-  --dark:#333;
+  --black:#282828;
+  --dark:#273647;
   --orange:#ffa500;
-  --purple:#5f5fd3;
   font-size: 18px;
 }
 
@@ -55,6 +54,7 @@ a, a:hover, a:active, a:visited {
 main {
   max-width: 100vw;
   min-height: 80vh;
+  padding-bottom: 6.5rem;
 }
 
 .center-content {
@@ -183,12 +183,29 @@ footer ul {
   margin: 0 auto;
 }
 
-footer ul a li {
+.link p {
+  font-size: 1.5rem;
+  padding: 0 1em;
+}
+
+.link p:hover {
+  text-decoration: underline 2px;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 10px;
+}
+
+.link:hover {
+  text-decoration: underline 2px;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 10px;
+}
+
+.link li {
   font-size: 1.1rem;
   padding: 2em 1em;
 }
 
-footer ul a:hover li {
+.link:hover li {
   text-decoration: underline 2px;
   text-decoration-color: var(--orange);
   text-underline-offset: 10px;
@@ -210,23 +227,6 @@ footer ul a:hover li {
   .visual {
     width: fit-content;
   }
-}
-
-/* ESTILOS ÚTEIS SOBREPOSTOS */
-.hidden {
-  display: none;
-}
-
-a {
-  cursor: pointer;
-}
-
-.flex {
-  display: flex;
-}
-
-.col {
-  flex-direction: column;
 }
 
 /* Elements */
@@ -273,13 +273,7 @@ gear-box {
   width: 220px;
   aspect-ratio: 16 / 9;
   background: #eee;
-  border: black solid .8em;
-}
-
-@media (min-width: 850px) {
-  .screen {
-    width: 350px;
-  }
+  border: black solid .4em;
 }
 
 .screen::before {
@@ -293,7 +287,7 @@ gear-box {
   height: 50px;
 }
 
-.screen:after {
+.screen::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -304,46 +298,42 @@ gear-box {
   height: 10px;
 }
 
-/* ANIMAÇÃO ALTERA LARGURA ENTRE 50% E 100% */
-.virtual-head {
+.screen .virtual-head {
   width: 100%;
   height: 25%;
   margin: 0 auto;
   background-color: var(--orange);
 }
 
-.virtual-content {
+.screen .virtual-content {
   width: 100%;
   height: 75%;
-  /*background: blue;*/
   display: flex;
   flex-direction: row;
   position: absolute;
   bottom: 0;
 }
 
-.virtual-half {
+.screen .virtual-half {
   width: 50%;
   height: 100%;
-  /*background: red;*/
 }
 
-/*ANIMAÇÃO ALTERA O TAMANHO ENTRE 20% E 80% */
-.virtual-half .p {
+.screen .virtual-half .p {
   width: 80%;
   height: 4px;
   background: #555;
   margin: 8% 10%;
 }
 
-.writeLine {
+.screen .halfLine {
   width: 55%;
   height: 4px;
   background: #555;
   margin: 8% 10%;
 }
 
-.virtual-half .virtual-img {
+.screen .virtual-half .virtual-img {
   width: 50%;
   aspect-ratio: 1;
   background-size: 100%;
@@ -352,45 +342,11 @@ gear-box {
   animation: iconSet 14s steps(7) 0s infinite;
 }
 
-.sq1, .sq2, .sq3 {
-  aspect-ratio: 1/1;
-  background: #2225;
-  border: 1px solid #0003;
-  position: absolute;
-}
-
-.sq1 {
-  width: 100px;
-  right: 50px;
-}
-
-.sq2 {
-  width: 75px;
-  left: 200px;
-}
-
-.sq3 {
-  width: 50px;
-  left: 500px;
-  display: none;
-}
-
-@media (min-width: 700px) {
-  .sq3 {
-    display: block;
+@media (min-width: 850px) {
+  .screen {
+    width: 350px;
+    border: black solid .6em;
   }
-}
-
-.asq1 {
-  animation: sq1 17s linear 2s infinite alternate-reverse both;
-}
-
-.asq2 {
-  animation: sq2 9s linear 0s infinite alternate-reverse both;
-}
-
-.asq3 {
-  animation: sq3 11s linear 1s infinite alternate both;
 }
 
 .card {
@@ -399,18 +355,25 @@ gear-box {
   margin: 2rem auto;
   border-radius: 15px;
   padding: 2rem;
-  background-color: #222;
+  background-color: var(--black);
+  color: #ddd;
+}
+
+@media (max-width: 1010px) {
+  .card {
+    border-radius: 0;
+  }
 }
 
 .card-title {
-  margin: 0 auto;
+  margin-bottom: 1rem;
+  text-align: center;
   font-size: 2.5rem;
   font-family: 'Staatliches';
   color: #fff;
 }
 
 .card-content {
-  margin: 1rem auto;
   width: 100%;
 }
 
@@ -419,18 +382,31 @@ gear-box {
   overflow: hidden;
 }
 
+@media (max-width: 700px) {
+  .card-img {
+    display: none;
+  }
+}
+
 .card-img img {
   border-radius: 5px;
 }
 
 .card-info {
   width: 70%;
-  padding: 0 1rem 0 2rem;
   position: relative;
+  padding: 0 2rem;
+}
+
+@media (max-width: 700px) {
+  .card-info {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .card-info span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--orange);
   margin-bottom: 5rem;
 }
@@ -446,20 +422,18 @@ gear-box {
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 1rem 0 0 0;
-  justify-content: center;
-  gap: 4rem;
+  justify-content: space-evenly;
 }
 
 .card-btnArea a {
   display: block;
   font-size: 1rem;
   padding: 1em;
-  width: 8rem;
+  width: 7em;
   text-align: center;
   font-family: 'quicksand';
   background-color: transparent;
-  border: 1px solid #555;
+  border: 1px solid #fff;
   border-radius: 8px;
 }
 
@@ -471,16 +445,12 @@ gear-box {
   margin-bottom: 10rem;
 }
 
-/* ANIMATIONS */
 /*
     ANIMATIONS FOR INTRO PAGE GEARS
 */
 @keyframes hide-intro {
-  90% {
-    transform: translateY(-100%);
-  }
   100% {
-    transform: scale(0);
+    transform: translateY(-100%);
   }
 }
 
@@ -503,19 +473,19 @@ gear-box {
   0% {
     background-image: url(../assets/icons/html.png);
   }
-  18% {
+  16% {
     background-image: url(../assets/icons/sass.png);
   }
-  38% {
+  33% {
     background-image: url(../assets/icons/js.png);
   }
-  50% {
+  49% {
     background-image: url(../assets/icons/react.png);
   }
   64% {
     background-image: url(../assets/icons/php.png);
   }
-  78% {
+  84% {
     background-image: url(../assets/icons/sql.png);
   }
   100% {
@@ -523,39 +493,20 @@ gear-box {
   }
 }
 
-/*
-    ANIMATIONS FOR MAIN PAGE FALLING BLOCKS
-*/
-@keyframes sq1 {
-  0% {
-    top: 0%;
-    transform: rotate(-95deg);
-  }
-  100% {
-    top: 85%;
-    transform: rotate(450deg);
-  }
+/* ESTILOS ÚTEIS SOBREPOSTOS */
+.hidden {
+  display: none;
 }
 
-@keyframes sq2 {
-  0% {
-    top: 0%;
-    transform: rotate(-915deg);
-  }
-  100% {
-    top: 85%;
-    transform: rotate(13deg);
-  }
+a {
+  cursor: pointer;
 }
 
-@keyframes sq3 {
-  0% {
-    top: 0%;
-    transform: rotate(5deg);
-  }
-  100% {
-    top: 85%;
-    transform: rotate(-500deg);
-  }
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
 }
 /*# sourceMappingURL=style.css.map */
