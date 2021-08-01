@@ -11,6 +11,10 @@ body, html {
   overflow-x: hidden;
 }
 
+img {
+  width: 100%;
+}
+
 :root {
   font-size: 22px;
   font-family: sans-serif;
@@ -381,6 +385,63 @@ footer {
   width: 100%;
   background-color: var(--color0);
   color: white;
+}
+
+.bag-icon {
+  position: fixed;
+  z-index: 2;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px !important;
+  height: 100px  !important;
+  background-color: var(--color4);
+  border: dashed 2px black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.bag-icon:hover {
+  background-color: var(--color1);
+}
+
+.bag-icon img {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bag-icon .bag-count-items {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px black solid;
+  background-color: white;
+  line-height: 28px;
+  font-family: monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.attention {
+  background-color: #2b2;
+}
+
+.attention::after {
+  position: absolute;
+  content: "Item adicionado";
+  left: -50%;
+  bottom: -2rem;
+  padding: .5rem;
+  width: max-content;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
 }
 
 /*Overriding properties*/
