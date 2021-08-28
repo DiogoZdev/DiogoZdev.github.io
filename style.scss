@@ -11,8 +11,11 @@
 
 *{
     box-sizing: border-box;
+    //box-shadow: 0 0 1px 1px green;
     margin:0;
     padding:0;
+    flex-grow: 0;
+
     color:#ddd;
     text-decoration: none;
     list-style: none;
@@ -421,7 +424,14 @@ gear-box{
         }
         
         img{
-            border-radius: 5px;
+            min-height: 100%;
+            object-fit: cover;
+            transition: ease-in-out .3s;
+
+            &:hover {
+                transform:scale(1.1);
+
+            }
         }
     }
 

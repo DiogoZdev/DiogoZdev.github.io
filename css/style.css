@@ -13,6 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  flex-grow: 0;
   color: #ddd;
   text-decoration: none;
   list-style: none;
@@ -389,7 +390,13 @@ gear-box {
 }
 
 .card-img img {
-  border-radius: 5px;
+  min-height: 100%;
+  object-fit: cover;
+  transition: ease-in-out .3s;
+}
+
+.card-img img:hover {
+  transform: scale(1.1);
 }
 
 .card-info {

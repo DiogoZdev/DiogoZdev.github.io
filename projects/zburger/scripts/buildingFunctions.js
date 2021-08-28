@@ -89,7 +89,7 @@ function updateBagCount() {
     }
 
     
-};
+}
 
 // Update caqt total value
 
@@ -140,7 +140,7 @@ function submitRequest() {
     console.log(request); 
     let finalRequest = encodeURI(request);
 
-    window.open(`https://wa.me/${business_phone}?text=${finalRequest}`, '_brlank');
+    window.open(`https://wa.me/${business_phone}?text=${finalRequest}`, '_blank');
     
     toggleCart();
     toggleRequest();
