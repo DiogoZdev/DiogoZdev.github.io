@@ -1,86 +1,119 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
-    <head>
-        <title>Diogo Zangirolani</title>
+<!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap" rel="stylesheet"> 
+    <title>Diogo Lara - DEV</title>
+  </head>
+  <body>
+    <div class="wrapper">
 
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="icon" type="image/ico" sizes="16x16" href="assets/icons/favicon.ico">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    </head>
-
-    <body ondragstart="return false">
-        
-        <!-- INITIAL LOADING SCREEN -->
-        <intro class="intro">
-            <gear-box>
-                <img src="assets/icons/gear.png" class="gear1" alt="gear1">
-                <img src="assets/icons/gear.png" class="gear2" alt="gear2">
-            </gear-box>
-        </intro>
-        
-        <div class="mobile-menu hidden">
-            <div class="close-mobile-menu" onClick="toggle_mobile_menu()">[x]</div>
-            <a class="link" href="portfolio.html"><p>Portfólio</p></a>
-            <a class="link" target="_blank" href="https://github.com/diogozdev"><p>Github</p></a>
-            <a class="link" target="_blank" href="https://linkedin.com/in/diogo-lara"><p>LinkedIn</p></a>
-           
+      <header>
+        <div class="hero">
+          <img src="https://github.com/diogozdev.png" alt="Foto de Diogo">
+          <div>
+            <h1>Diogo Lara</h1>
+            <h2>Desenvolvedor</h2>
+          </div>
+          
         </div>
-        
-            <main>
-                <header>
-                    <div class="center">
-                        <div class="logo">
-                            <img src="assets/img/DZ_500.png" alt="">
-                        </div>
-                        <div class="menu">
-                            <div class="menu-area" onClick="toggle_mobile_menu()">
-                                <div class="menu-area-bar"></div>
-                                <div class="menu-area-bar"></div>
-                                <div class="menu-area-bar"></div>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                <div class="center-content">
-                    <div class="words"><p>Olá! <br>
-                        Sou Diogo Zangirolani,<br> 
-                        desenvolvedor Front End e web designer<p>
-                    </div>
-                    <div class="visual">
-                        <div class="screen">
-                            <div class="virtual-head"></div>
-                            <div class="virtual-content">
-                                <div class="virtual-half">
-                                    <div class="p"></div>
-                                    <div class="p"></div>
-                                    <div class="halfLine"></div>
-                                    <div class="p"></div>
-                                   <div class="halfLine"></div>
-                                </div>
-                                <div class="virtual-half">
-                                    <div class="virtual-img"></div>
-                                </div>
-                            </div>                            
-                        </div>
+        <div class="tech">
+          <ul>
+            <li>Angular2+</li>
+            <li>ReactJS</li>
+            <li>Java</li>
+            <li>JavaScript / TypeScript</li>
+            <li>CSS / Scss</li>
+            <li>Git</li>
+            <li>UX</li>
+          </ul>
+        </div>
+      </header>
 
-                    </div>
-                </div>  
-                <footer>
-                    <div class="center">
-                        <div class="content">
-                        <ul>
-                            <a class="link" href="portfolio.html"><li>Portfólio</li></a>
-                            <a class="link" target="_blank" href="https://github.com/diogozdev"><li>Github</li></a>
-                            <a class="link" target="_blank" href="https://linkedin.com/in/diogo-lara"><li>LinkedIn</li></a>
-                        
-                        </ul>
-                    </div>
-                    </div>
-                </footer>   
-            </main>
-            
-    </body>
-    <script src="scripts/screenFunctions.js"></script>
+      <main>
+        <aside card>
+          <h1 title>Diogo Lara</h1>
+          <ul>
+            <li><a target="_blank" href="https://linkedin.com/in/diogo-lara">LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/diogozdev">GitHub</a></li>
+          </ul>
+
+          <h2 subtitle>Stack</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS / SCSS</li>
+            <li>JavaScrit / TypeScript</li>
+            <li>Angular2+</li>
+            <li>ReactJS</li>
+            <li>Java</li>
+          </ul>
+
+          <h2 subtitle>Idiomas</h2>
+          <ul>
+            <li>Português</li>
+            <li>Inglês</li>
+            <li>Espanhol</li>
+          </ul>
+        </aside>
+
+        <section>
+          <article card>
+            <h1 title>BankMe</h1>
+            <h2>2022 - ?</h2>
+            <p>Jornada iniciada em Junho de 2022. Atualizações em breve.</p>
+          </article>
+          <article card>
+            <h1 title>Maptriz</h1>
+            <h2>2021 - 2022</h2>
+            <p>Onde iniciei minha jornada como desenvolvedor, profissionalmente falando. De um amante do design e desenvolvimento front-end para desenvolvedor fullstack.</p>
+            <p>Pude apoiar o time com a revisão e padronização da tradução do sistema para o inglês e espanhol, participar da construção de novos módulos do sistema, elaborar telas para que os usuários tivessem uma boa experiência de uso e adicionar funcionalidades construindo a parte visual e implementando a interação com os bacos de dados.</p>
+
+            <a target ="_blank" href="https://www.linkedin.com/company/maptriz/?originalSubdomain=br">Maptriz no LinkedIn</a>
+          </article>
+
+          <article card>
+            <h1 title>Projetos</h1>
+            <h2></h2>
+
+            <ul>
+              <li>
+                <a target="_blank" href="https://andressailustra.netlify.app/">
+                  Andressa Ilustra
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://sergiogenealogia.github.io/">
+                  Sérgio Genealogia
+                </a>
+              </li>
+              <li></li>
+            </ul>
+          </article>
+
+          <article card>
+            <h1 title>Estudos e Recomendações</h1>
+            <h2>Since 2019</h2>
+            <p>
+              Aqui guardo algumas anotações das coisas que estudei e que tenho estudado, recomenções de cursos e outros. Espero poder ajudar outros que estão nessa jornada também.
+            </p>
+            <ul>
+              <li><a target ="_blank" href="https://diogo-lara.notion.site/Dev-07d85b8ef6da45048992a23748ff2f55">Minhas anotações no Notion</a></li>
+            </ul>
+          </article>
+
+        </section>
+      </main>
+
+      <footer>
+        2022 - Obrigado por vir até aqui!  :)
+      </footer>
+
+
+    </div>
+  </body>
 </html>

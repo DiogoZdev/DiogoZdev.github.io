@@ -1,0 +1,163 @@
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  color: #fff;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  overflow-y: auto;
+  background-color: #090a0a;
+}
+
+.wrapper {
+  width: calc(100vw - 2rem);
+  height: max-content;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 2rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  
+  margin:0 0 2rem;
+}
+
+header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  border: 5px solid #e45b00;
+  background-color: black;
+  flex-grow: 0;
+}
+
+header h1 {
+  font-size: 42px;
+  color: #e45b00;
+  width: fit-content;
+}
+
+header h2 {
+  font-size: 26px;
+  color: #999;
+  width: fit-content;
+}
+
+.tech {
+  width: 100%;
+  padding: 1rem;
+  background-color: #290e06;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+aside {
+  min-width: 230px;
+  background-color: #1a1818;
+  height: min-content;
+  position: sticky;
+  top: 2rem;
+}
+
+section {
+  width: 100%;
+  height: max-content;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+article {
+  width: 100%;
+  background-color: #1b1818;
+  min-height: 200px;
+  height: min-content;
+}
+
+article h2 {
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+article p {
+  text-indent: 2ch;
+}
+
+article a {
+  padding: 1rem;
+  display: block;
+}
+
+article a:hover {
+  background-color: #0005;
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+}
+
+/* Estilos Padrão */
+
+[card] {
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+[title], [subtitle] {
+  line-height: 2.5;
+  color: #e45b00;
+}
+
+[title] {
+  font-size: 24px;
+}
+
+[subtitle] {
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+p, li {
+  padding-left: 1ch;
+  color: #eee;
+  list-style: none;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: #007de4;
+  width: fit-content;
+}
