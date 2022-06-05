@@ -83,10 +83,26 @@ main {
 
 aside {
   min-width: 230px;
-  background-color: #1a1818;
+  background-color: #001118;
   height: min-content;
   position: sticky;
   top: 2rem;
+}
+
+@media (max-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  aside {
+    width: 100%;
+    height: min-content;
+    position: relative;
+    margin-bottom: 2rem;
+  }
 }
 
 section {
