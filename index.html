@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diogo Lara - DEV</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diogozdev@github</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Você está sendo redirecionado para meu novo <a href="https://diogolara.dev">site</a> <br>
-    :)
+    <header>
+        <h1>Diogo Lara</h1>
+
+        <p>
+            Here is a safe place for old, <br/>
+            educational and random-purpose<br/>
+            projects.<br/><br/>
+            Just have some fun!
+        </p>
+    </header>
+
+    <main>
+        <section class="projects">
+            <a href="https://diogolara.dev" class="project-box new">
+                <h2>diogolara.dev</h2>
+                <p>Visit my new website</p>
+            </a>
+            <a href="./play/rock_paper_scissors" class="project-box">
+                <h2>Rock Paper Scissors</h2>
+                <p>
+                    Play the classic game of Rock, Paper, Scissors.
+                </p>
+            </a>
+            <div class="project-box">
+                <h2>Soon...</h2>
+                <p>The button corp. Inspired by the cookie clicker.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Diogo Lara.</p>
+        <p>diogo.lara.dev@gmail.com</p>
+        <p>hosted with GitHub Pages</p>
+    </footer>
 </body>
 </html>
-<script>
-  setTimeout(() => {
-    const link = document.createElement("a");
-    link.setAttribute("href", "https://diogolara.dev");
-    link.click();
-
-  }, 1500)
-</script>
