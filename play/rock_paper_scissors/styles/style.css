@@ -1,0 +1,105 @@
+@import "./basic.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: unset;
+    font-size: 16px;
+}
+
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.btn_game {
+    min-width: 10rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    cursor: pointer
+}
+
+.btn_game:hover {
+    background-color: #222;
+    color: white;
+    text-shadow: #fff 0px 0px 2px;
+}
+
+.win, .win:hover {
+    background-color: green;
+}
+
+.lose, .lose:hover {
+    background-color: rgb(199, 0, 0);
+}
+
+#result {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#interaction {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.banner {
+    height: 300px;
+    width: 47%;
+    background-color: #222;
+    box-shadow: #000 0px 0px 5px;
+    color: white;
+    padding: 2rem;
+    transition: transform 0.5s ease;
+    display: flex;
+    place-content: center;
+}
+
+.banner img {
+    max-width: 40vw;
+    display: block;
+}
+
+#playerBanner {
+    top: calc(50% - 150px);
+    left: 0;
+}
+
+#playerBanner.hidden {
+    transform: translateX(-100%);
+    box-shadow: none;
+}
+
+#computerBanner {
+    top: calc(50% - 150px);
+    right: 0;
+    background-image: url(../images/circuit.webp);
+}
+
+#computerBanner.hidden {
+    transform: translateX(100%);
+    box-shadow: none;
+}

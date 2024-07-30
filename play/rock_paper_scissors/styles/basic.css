@@ -1,0 +1,14 @@
+.cols {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-block: 2rem;
+}
+
+.relative {
+    position: relative
+}
+
+.absolute {
+    position: absolute
+}
