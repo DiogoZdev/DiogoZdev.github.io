@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="cols" id="score">
+            <div>
+                <span>Rounds: </span>
+                <span id="rounds">0</span>
+            </div>
+    
+            <div>
+                <span>Your score: </span>
+                <span id="playerScore">0</span>
+            </div>
+    
+            <div>
+                <span>Computer score: </span>
+                <span id="computerScore">0</span>
+            </div>
+            
+        </div>
+        <div id="game">
+            <div id="buttons" class="cols">
+                <div class="btn_game" id="rock">rock</div>
+                <div class="btn_game" id="paper">paper</div>
+                <div class="btn_game" id="scissors">scissors</div>
+            </div>
+            <div>
+                <span>Your last choice: </span>
+                <span id="playerChoice"></span>
+            </div>
+            <div>
+                <span>Computer's last choice: </span>
+                <span id="computerChoice"></span>
+            </div>
+            <div id="result">
+            </div>
+        </div>
+    </div>
+
+    <div id="interaction" class="absolute">
+        <div id="playerBanner" class="banner absolute hidden">
+            <img id="playerImage" src="" alt="playerImage">
+        </div>
+        <div id="computerBanner" class="banner absolute hidden">
+            <img id="computerImage" src="" alt="computerImage">
+        </div>
+    </div>
+</body>
+</html>
